@@ -1,6 +1,5 @@
 import React, { Component } from "react";
 import { Route } from "react-router-dom";
-import jwtDecode from "jwt-decode";
 import NavBar from "./components/navBar";
 import MyMovieList from "./components/MyMovieList";
 import LoginForm from "./components/loginForm";
