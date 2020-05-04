@@ -21,7 +21,7 @@ mongoose.connect(
 app.use("/user", authRoute);
 app.use("/movies", moviesRoute);
 
-const port = process.env.PORT || 5001;
+const port = process.env.PORT || 5000;
 app.listen(port, () => {
   console.log(`Server is runnong on port: ${port}`);
 });
