@@ -9,7 +9,7 @@ class LoginForm extends Component {
     errors: {},
   };
   schema = {
-    username: Joi.string().required().label("Username"),
+    username: Joi.string().required().label("Email"),
     password: Joi.string().required().label("Password"),
   };
   validate = () => {
@@ -68,7 +68,7 @@ class LoginForm extends Component {
           <Input
             name="username"
             value={account.username}
-            label="Username"
+            label="Email"
             onChange={this.handleChange}
             error={errors.username}
             type="text"
