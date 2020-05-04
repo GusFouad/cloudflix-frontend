@@ -10,14 +10,31 @@ const NavBar = ({ user }) => {
           </Link>
           <ul id="nav-mobile" className="right hide-on-med-and-down">
             <li>
-              <NavLink to="#">Search</NavLink>
+              <NavLink to="/search">Search</NavLink>
             </li>
             <li>
-              <NavLink to="#">My List</NavLink>
+              <NavLink to="mylist">My List</NavLink>
             </li>
-            <li>
-              <NavLink to="#">Log Out</NavLink>
-            </li>
+            {!user && (
+              <React.Fragment>
+                <li>
+                  <NavLink to="/login">Login</NavLink>
+                </li>
+                <li>
+                  <NavLink to="/register">Register</NavLink>
+                </li>
+              </React.Fragment>
+            )}
+            {user && (
+              <React.Fragment>
+                <li>
+                  <NavLink to="/mylist">{user.name}</NavLink>
+                </li>
+                <li>
+                  <NavLink to="/logout">Log Out</NavLink>
+                </li>
+              </React.Fragment>
+            )}
           </ul>
         </div>
       </div>
