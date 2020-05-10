@@ -1,4 +1,12 @@
 const mongoose = require("mongoose");
+
+const MovieSchema = new mongoose.Schema({
+  movieId: {
+    type: Number,
+    required: true,
+  },
+});
+
 const userSchema = new mongoose.Schema({
   name: {
     type: String,
@@ -13,7 +21,7 @@ const userSchema = new mongoose.Schema({
     type: String,
     required: true,
   },
-  movies: [{ type: mongoose.Schema.Types.ObjectId, ref: "Movie" }],
+  movies: [MovieSchema],
 });
 
 module.exports = mongoose.model("User", userSchema);

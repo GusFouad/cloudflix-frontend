@@ -5,22 +5,17 @@ const Pagination = (props) => {
     let active = props.currentPage === i ? "active" : "";
     pageLinks.push(
       <li
-        className={`page-item ${active}`}
+        className={`waves-effect ${active}`}
         key={i}
         onClick={() => props.nextPage(i)}
       >
-        <a className="page-link ${active}">
-          {i}
-          <span className="sr-only">(current)</span>
-        </a>
+        <a>{i}</a>
       </li>
     );
   }
   return (
-    <div>
-      <nav aria-label="...">
-        <ul className="pagination justify-content-center">{pageLinks} </ul>
-      </nav>
+    <div className="container">
+      <ul className="pagination">{pageLinks} </ul>
     </div>
   );
 };

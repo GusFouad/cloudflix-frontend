@@ -47,7 +47,7 @@ class Search extends Component {
     this.setState({ currentMovie: null });
   };
   render() {
-    const numberPages = Math.floor(this.state.totalResults / 20);
+    const numberPages = Math.floor(this.state.totalResults / 21);
     return (
       <div>
         {this.state.currentMovie === null ? (
@@ -76,6 +76,23 @@ class Search extends Component {
           </div>
         ) : (
           <div>
+            <div className="container">
+              <div>
+                <div className="row">
+                  <section>
+                    <form onSubmit={this.handleSubmit}>
+                      <div>
+                        <input
+                          type="text"
+                          placeholder="Search movies"
+                          onChange={this.handleChange}
+                        />
+                      </div>
+                    </form>
+                  </section>
+                </div>
+              </div>
+            </div>
             <MovieInfo
               currentMovie={this.state.currentMovie}
               closeMovieInfo={this.closeMovieInfo}

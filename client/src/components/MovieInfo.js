@@ -3,12 +3,12 @@ import axios from "axios";
 const MovieInfo = ({ closeMovieInfo, currentMovie, onClickAdd }) => {
   onClickAdd = async () => {
     const movie = {
-      title: currentMovie.title,
-      plot: currentMovie.overview,
+      // title: currentMovie.title,
+      // plot: currentMovie.overview,
 
-      image: currentMovie.poster_path,
-      rating: currentMovie.vote_average,
-      releaseDate: currentMovie.release_date,
+      // image: currentMovie.poster_path,
+      // rating: currentMovie.vote_average,
+      // releaseDate: currentMovie.release_date,
       movieId: currentMovie.id,
     };
     await axios
