@@ -16,8 +16,8 @@ code {
   align-items: center;
   justify-content: center;
 }
-.movie-card {
-  height: 360px;
+p {
+  padding: 1rem;
 }
 .card .card-content {
   padding: 2rem 0 !important;

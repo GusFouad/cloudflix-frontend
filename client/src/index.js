@@ -6,6 +6,8 @@ import { BrowserRouter } from "react-router-dom";
 import "materialize-css";
 import "materialize-css/dist/css/materialize.min.css";
 
+console.log("SUPERMAN", process.env.REACT_APP_NAME);
+
 ReactDOM.render(
   <BrowserRouter>
     <App />

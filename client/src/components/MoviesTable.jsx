@@ -6,25 +6,19 @@ class MoviesTable extends Component {
       path: "image",
       lable: "Poster",
       content: (movie) => (
-        console.log("CONTENT", movie),
-        (<img src={`https://image.tmdb.org/t/p/w200${movie.poster_path}`} />)
+        <img src={`https://image.tmdb.org/t/p/w200${movie.poster_path}`} />
       ),
     },
     { path: "title", lable: "Title" },
     {
       path: "plot",
       lable: "Plot",
-      content: (movie) => (
-        console.log("PLOT", movie, movie.overview), (<p>{movie.overview}</p>)
-      ),
+      content: (movie) => <p>{movie.overview}</p>,
     },
     {
       path: "rating",
       lable: "Rating",
-      content: (movie) => (
-        console.log("Rating", movie, movie.vote_average),
-        (<p>{movie.vote_average}</p>)
-      ),
+      content: (movie) => <p>{movie.vote_average}</p>,
     },
     {
       key: "delete",

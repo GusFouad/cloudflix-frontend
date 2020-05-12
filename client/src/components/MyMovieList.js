@@ -8,13 +8,6 @@ class MovieList extends Component {
     movies: [],
   };
 
-  // const movies = await Promise.all(
-  //   data.map(item => { // You are using curly brackets. You must return a value.
-  //     const promise = axios(/* code in here */)
-  //     // do things
-  //     return promise
-  //   })
-  // )
   async componentDidMount() {
     let movieData = [];
 
@@ -25,20 +18,22 @@ class MovieList extends Component {
           config.movieIdApi + id.movieId + config.apiKey
         ).then(({ data }) => {
           movieData.push(data);
-          this.setState({ movies: movieData }, () =>
-            console.log("completed", this.state.movies)
-          );
+          this.setState({ movies: movieData }, () => console.log("completed"));
         });
         return promise;
       })
     );
-    console.log("FINAL", this.state.movies);
   }
   handleDelete = async (movie) => {
+    await axios.delete("http://localhost:5000/movies/" + movie.id, {
+      headers: {
+        Authorization: window.localStorage.getItem("token"),
+      },
+    });
+
     const originalMovies = this.state.movies;
-    const movies = originalMovies.filter((m) => m._id !== movie._id);
+    const movies = originalMovies.filter((m) => m.id !== movie.id);
     this.setState({ movies });
-    await axios.delete("http://localhost:5000/movies/delete/" + movie._id);
   };
   render() {
     const { length: count } = this.state.movies;

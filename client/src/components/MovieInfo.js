@@ -3,14 +3,9 @@ import axios from "axios";
 const MovieInfo = ({ closeMovieInfo, currentMovie, onClickAdd }) => {
   onClickAdd = async () => {
     const movie = {
-      // title: currentMovie.title,
-      // plot: currentMovie.overview,
-
-      // image: currentMovie.poster_path,
-      // rating: currentMovie.vote_average,
-      // releaseDate: currentMovie.release_date,
       movieId: currentMovie.id,
     };
+
     await axios
       .post("http://localhost:5000/movies/add", movie, {
         headers: {
@@ -48,6 +43,7 @@ const MovieInfo = ({ closeMovieInfo, currentMovie, onClickAdd }) => {
             />
           )}
         </div>
+
         <div className="col s12 m8">
           <div className="info-container">
             <p>{currentMovie.title}</p>

@@ -20,9 +20,10 @@ class App extends Component {
     } catch (ex) {}
   }
   render() {
+    const { user } = this.state;
     return (
       <React.Fragment>
-        <NavBar user={this.state.user} />
+        <NavBar user={user} />
         <main className="container">
           <Route path="/mylist" component={MyMovieList} />
           <Route path="/login" component={LoginForm} />
