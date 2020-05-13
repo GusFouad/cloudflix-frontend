@@ -31,6 +31,7 @@ const MovieInfo = ({ closeMovieInfo, currentMovie, onClickAdd }) => {
         <div className="col s12 m4">
           {currentMovie.poster_path === null ? (
             <img
+              className="movie-info-image"
               src={
                 "https://s3-ap-southeast-1.amazonaws.com/upcode/static/default-image/jpg"
               }
@@ -38,6 +39,7 @@ const MovieInfo = ({ closeMovieInfo, currentMovie, onClickAdd }) => {
             />
           ) : (
             <img
+              className="movie-info-image"
               src={`http://image.tmdb.org/t/p/w185${currentMovie.poster_path}`}
               alt="card"
             />

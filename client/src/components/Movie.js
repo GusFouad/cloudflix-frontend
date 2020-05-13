@@ -2,7 +2,7 @@ import React from "react";
 
 const Movie = (props) => {
   return (
-    <div className="col s12 m8 l4">
+    <div className="col s12 m6 l3">
       <div className="card">
         <div className="card-image waves-effect waves-block waves-light">
           {props.image == null ? (
@@ -26,7 +26,7 @@ const Movie = (props) => {
         <div className="card-content">
           <p>
             <a href="#" onClick={() => props.viewMovieInfo(props.movieId)}>
-              {props.movieTitle}
+              View Details
             </a>
           </p>
         </div>

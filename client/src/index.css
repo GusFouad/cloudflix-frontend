@@ -19,6 +19,11 @@ code {
 p {
   padding: 1rem;
 }
+.movie-info-image {
+  width: 100%;
+  height: 360px;
+}
+
 .card .card-content {
   padding: 2rem 0 !important;
   text-align: center;
