@@ -1,7 +1,6 @@
 import axios from "axios";
-import { apiUrl } from "../config.json";
 
-const apiEndpoint = apiUrl + "/login";
+const apiEndpoint = process.env.REACT_APP_API_URL + "/login";
 
 export function login(email, password) {
   return axios.post(apiEndpoint, {

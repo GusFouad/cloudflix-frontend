@@ -8,6 +8,8 @@ export function getMovies() {
   });
 }
 export async function getMovieId() {
-  return axios(config.movieIdApi + "268" + config.apiKey);
+  return axios(
+    process.env.REACT_APP_MOVIE_ID_API + "268" + process.env.REACT_APP_API_KEY
+  );
 }
 export function deleteMovie(movieId) {}

@@ -13,7 +13,11 @@ const MovieInfo = ({ closeMovieInfo, currentMovie, onClickAdd }) => {
         },
       })
       .then((r) =>
-        console.log(r, "Successfully added to your watchlist", movie.image)
+        console.log(
+          r,
+          "Successfully added to your watchlist",
+          process.env.REACT_APP_API_KEY
+        )
       );
   };
 
