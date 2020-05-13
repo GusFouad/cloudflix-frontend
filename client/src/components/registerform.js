@@ -83,7 +83,7 @@ class RegisterForm extends Component {
             label="Password"
             onChange={this.handleChange}
             error={errors.password}
-            text="password"
+            type="password"
           />
           <button disabled={this.validate()} className="btn btn-primary">
             Register

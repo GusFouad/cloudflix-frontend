@@ -73,6 +73,7 @@ class LoginForm extends Component {
             error={errors.username}
             type="text"
           />
+
           <Input
             name="password"
             value={account.password}
