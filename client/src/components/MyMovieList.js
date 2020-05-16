@@ -23,7 +23,7 @@ class MovieList extends Component {
 		);
 	}
 	handleDelete = async (movie) => {
-		await axios.delete(process.env.REACT_APP_API_URL + 'movies/' + movie.id, {
+		await axios.delete(process.env.REACT_APP_API_URL + '/movies/' + movie.id, {
 			headers: {
 				Authorization: window.localStorage.getItem('token')
 			}

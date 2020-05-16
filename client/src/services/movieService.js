@@ -1,6 +1,6 @@
 import axios from 'axios';
 export function getMovies() {
-	return axios.get(process.env.REACT_APP_API_URL + 'movies/list', {
+	return axios.get(process.env.REACT_APP_API_URL + '/movies/list', {
 		headers: {
 			Authorization: window.localStorage.getItem('token')
 		}
