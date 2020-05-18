@@ -29,6 +29,7 @@ p {
 .home {
 	text-align: center;
 }
+.cloudflix-nav,
 h1 {
 	font-family: 'Pacifico', cursive;
 }
@@ -39,4 +40,18 @@ h3 {
 .home p {
 	margin: 0;
 	padding: 0;
+}
+li a {
+	color: black !important;
+	font-weight: 600;
+}
+.search-box {
+	display: flex;
+	width: 100%;
+}
+.material-icons {
+	margin: 1.2rem 0;
+}
+.search-input {
+	width: 100%;
 }

@@ -54,12 +54,18 @@ class Search extends Component {
 								<div className="row">
 									<section>
 										<form onSubmit={this.handleSubmit}>
-											<div>
-												<input
-													type="text"
-													placeholder="Search movies"
-													onChange={this.handleChange}
-												/>
+											<div className="search-box">
+												<div>
+													<i className="material-icons">search</i>
+												</div>
+												<div className="search-input">
+													<input
+														type="text"
+														placeholder="Search movies"
+														onChange={this.handleChange}
+														results="0"
+													/>
+												</div>
 											</div>
 										</form>
 									</section>
