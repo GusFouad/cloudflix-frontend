@@ -1,7 +1,9 @@
 import React from 'react';
 import axios from 'axios';
+import { getUser } from '../services/authService';
 const MovieInfo = ({ closeMovieInfo, currentMovie, onClickAdd }) => {
 	onClickAdd = async () => {
+		const user = getUser();
 		const movie = {
 			movieId: currentMovie.id
 		};
@@ -12,7 +14,7 @@ const MovieInfo = ({ closeMovieInfo, currentMovie, onClickAdd }) => {
 					Authorization: window.localStorage.getItem('token')
 				}
 			})
-			.then((r) => console.log(r, 'Successfully added to your watchlist', process.env.REACT_APP_API_KEY));
+			.then((r) => console.log(r, 'Successfully added to your watchlist', 'THIS IS USER', user));
 	};
 
 	return (
