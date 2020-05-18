@@ -13,6 +13,7 @@ export function getUser() {
 	try {
 		const jwt = localStorage.getItem('token');
 		const user = jwtDecode(jwt);
+		return user;
 	} catch (ex) {
 		return null;
 	}

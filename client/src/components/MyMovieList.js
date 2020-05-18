@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import config from '../config.json';
-import { getMovies, getMovieId } from '../services/movieService';
+import { getMovies } from '../services/movieService';
 import MoviesTable from './MoviesTable';
 import axios from 'axios';
 class MovieList extends Component {

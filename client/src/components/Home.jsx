@@ -3,15 +3,15 @@ class Home extends Component {
 	state = {};
 	render() {
 		return (
-			<div>
-				<h1>Cloud Flix</h1>
+			<div className="home">
+				<h1>CloudFlix</h1>
 				<h2>Welcome to cloud flix</h2>
+				<h3>Go ahead and search your fav movies and add them to your list!</h3>
 				<p>
-					First time? <a>Register Here!</a>
+					First time? <a href="/register">Register Here!</a>
 				</p>
-				<p>then go ahead and search your fav movies and add them to your list!</p>
 				<p>
-					Already have an account? <a>Login Here!</a>
+					Already have an account? <a href="/login">Login Here!</a>
 				</p>
 			</div>
 		);
